@@ -1,2 +1,5 @@
-# web-330
-Assignments for class web-330
+# WEB 330 Enterprise JavaScript II
+
+## Contributors
+- Professor Krasso
+- Boyd Vigness
