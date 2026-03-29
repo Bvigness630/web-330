@@ -10,8 +10,8 @@
 /*--------------- Object Code --------------------*/
 
 function Timer(min, sec) {
-    this.minutes = min;
-    this.seconds = sec;
+    this.minutes = Number(min) || 0;
+    this.seconds = Number(sec) || 0;
     this.timeID = null;
 }
 
@@ -27,17 +27,12 @@ Timer.prototype.runPause = function(timer, minBox, secBox) {
 };
 
 function countdown(timer, minBox, secBox) {
-
-    timer.minutes = parseInt(timer.minutes);
-    timer.seconds = parseInt(timer.seconds);
-
     if (timer.seconds > 0) {
         timer.seconds--;
     } else if (timer.minutes > 0) {
         timer.minutes--;
         timer.seconds = 59;
     } else {
-  
         window.clearInterval(timer.timeID);
         timer.timeID = null;
     }
@@ -46,21 +41,20 @@ function countdown(timer, minBox, secBox) {
     secBox.value = timer.seconds;
 }
 
-/*--------------- Interface Code -----------------*/
+/*---------------Interface Code -----------------*/
 
-/* Interface Objects */
 let minBox = document.getElementById("minutesBox");
 let secBox = document.getElementById("secondsBox");
 let runPauseTimer = document.getElementById("runPauseButton");
 
-let myTimer = new Timer(parseInt(minBox.value) || 0, parseInt(secBox.value) || 0);
+let myTimer = new Timer(minBox.value, secBox.value);
 
 minBox.onchange = function() {
-    myTimer.minutes = parseInt(minBox.value) || 0;
+    myTimer.minutes = Number(minBox.value) || 0;
 };
 
 secBox.onchange = function() {
-    myTimer.seconds = parseInt(secBox.value) || 0;
+    myTimer.seconds = Number(secBox.value) || 0;
 };
 
 runPauseTimer.onclick = function() {
