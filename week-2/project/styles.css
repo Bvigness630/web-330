@@ -1,0 +1,52 @@
+/*
+  Pragmatic JavaScript
+  Chapter 1
+  Programming Assignment
+
+  Author: Boyd Vigness
+  Date: 4/5/2026
+  Filename: styles.css
+*/
+
+/* Your CSS goes here */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, firebrick, darkblue);
+  color: white;
+  text-align: center;
+}
+
+#mainContainer {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  margin: 50px auto;
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px black;
+}
+
+input, select, button {
+  width: 90%;
+  padding: 8px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: none;
+}
+
+button {
+  background-color: coral;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: chocolate;
+}
+
+#characterOutput {
+  margin-top: 20px;
+  background: rgba(255,255,255,0.1);
+  padding: 15px;
+  border-radius: 10px;
+}
