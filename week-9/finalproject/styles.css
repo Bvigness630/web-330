@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 960px;
+  margin: 0 auto;
+  font-family: Verdana, Geneva, sans-serif;
+}
+
+header {
+  background: #1d428a;
+  color: white;
+  text-align: center;
+  font-size: 42px;
+  padding: 20px;
+}
+
+section {
+  background-color: #f4f4f4;
+  min-height: 500px;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+button {
+  display: block;
+  margin: 0 auto 20px auto;
+  padding: 10px 16px;
+  font-size: 16px;
+}
+
+.player-card {
+  background: white;
+  border: 2px solid #888;
+  padding: 15px;
+  margin: 15px auto;
+  width: 85%;
+}
+
+#error-message {
+  color: red;
+  text-align: center;
+  margin-top: 20px;
+}
